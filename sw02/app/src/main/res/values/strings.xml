@@ -12,7 +12,7 @@
 
     <string name="log_title">Lifecycle Logging</string>
     <string name="log_label">Diese Fragment loggt alle Lifecycle-Events von der Host Activity und Fragment. Die Ausgabe erfolgt in der \'LogCat\' View im Android Studio.</string>
-    <string name="log_remark">Ansonsten macht diese Fragment nichts.</string>
+    <string name="log_remark">Ansonsten macht diese Fragment nichts. :(</string>
 
     <string name="question_title">Kleine Frage am Rande: Wie sind Sie bisher mit dem Modul zufrieden?</string>
     <string name="question_buttontext">Antwort abschicken</string>
