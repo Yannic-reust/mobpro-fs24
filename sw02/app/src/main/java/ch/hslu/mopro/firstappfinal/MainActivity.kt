@@ -49,6 +49,9 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         val changePage = Intent(this, LifecycleLogActivity::class.java)
         startActivity(changePage)
 
+       
+
+
     }
 
     private fun startBrowser() {
