@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">SW03-UI-State</string>
+    <string name="wellcome_text">Willkommen zur 2. Übung im Modul MobPro.</string>
+    <string name="layout_1_text">1. Layouts: Linear &amp; Constraint</string>
+    <string name="linear_layout_text">Linear Layout</string>
+    <string name="constrain_layout_text">Constraint Layout</string>
+    <string name="layout_2_text">2. Events am Bsp. RatingBar</string>
+    <string name="rating_bar_text">Ah, Du wählst</string>
 </resources>
