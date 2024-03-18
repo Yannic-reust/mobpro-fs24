@@ -28,9 +28,9 @@ class OverviewFragment : Fragment() {
     private val requestPermissionLauncher: ActivityResultLauncher<String> =
         registerForActivityResult(
             ActivityResultContracts.RequestPermission(),
-            object: ActivityResultCallback<Boolean> {
+            object : ActivityResultCallback<Boolean> {
                 override fun onActivityResult(result: Boolean) {
-                    if(!result) {
+                    if (!result) {
                         Toast.makeText(context, "Permission denied!", Toast.LENGTH_LONG).show()
                         return
                     } else {
@@ -38,6 +38,7 @@ class OverviewFragment : Fragment() {
                     }
                 }
             })
+
     companion object {
         private const val SHARED_PREFERENCES_AMOUNT = "sharedPreferencesAmount"
         private const val COUNT_KEY = "amountOpened"
@@ -50,7 +51,6 @@ class OverviewFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Initialize _binding
         _binding = FragmentOverviewBinding.inflate(inflater, container, false)
         // Return the root
         return _binding!!.root
@@ -58,7 +58,6 @@ class OverviewFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        // Set _binding to null when the view is destroyed to avoid memory leaks
         _binding = null
     }
 
@@ -70,14 +69,16 @@ class OverviewFragment : Fragment() {
 
     private fun getAmountOpened(): Int {
         val preferences: SharedPreferences = requireActivity().getSharedPreferences(
-            SHARED_PREFERENCES_AMOUNT, Context.MODE_PRIVATE)
+            SHARED_PREFERENCES_AMOUNT, Context.MODE_PRIVATE
+        )
         return preferences.getInt(COUNT_KEY, 0)
     }
 
 
     private fun setOpenedCount(count: Int) {
         val preferences: SharedPreferences = requireActivity().getSharedPreferences(
-            SHARED_PREFERENCES_AMOUNT, Context.MODE_PRIVATE)
+            SHARED_PREFERENCES_AMOUNT, Context.MODE_PRIVATE
+        )
         val editor = preferences.edit()
         editor?.putInt(COUNT_KEY, count)
         editor.apply()
@@ -120,8 +121,12 @@ class OverviewFragment : Fragment() {
     }
 
     private fun updateTeaPreferenceText() {
-        if(sharedPreferencesViewModel.isTeaWithSugar) {
-            binding.tvTeePreference.text = getString(R.string.tee_preferences_text_sweet, sharedPreferencesViewModel.teaPreference, sharedPreferencesViewModel.teaSweetenerDisplayValues)
+        if (sharedPreferencesViewModel.isTeaWithSugar) {
+            binding.tvTeePreference.text = getString(
+                R.string.tee_preferences_text_sweet,
+                sharedPreferencesViewModel.teaPreference,
+                sharedPreferencesViewModel.teaSweetenerDisplayValues
+            )
         } else {
             binding.tvTeePreference.text =
                 getString(R.string.tee_preference_text, sharedPreferencesViewModel.teaPreference)
@@ -129,12 +134,14 @@ class OverviewFragment : Fragment() {
     }
 
 
-
     private fun showSmsDialog() {
         val permissionSms = Manifest.permission.READ_SMS
-        val grantedReadSms = ContextCompat.checkSelfPermission(requireContext(), permissionSms) == PackageManager.PERMISSION_GRANTED
+        val grantedReadSms = ContextCompat.checkSelfPermission(
+            requireContext(),
+            permissionSms
+        ) == PackageManager.PERMISSION_GRANTED
 
-        if(grantedReadSms) {
+        if (grantedReadSms) {
             accessSmsContent()
         } else {
             requestPermissionLauncher.launch(permissionSms)
@@ -143,7 +150,8 @@ class OverviewFragment : Fragment() {
 
     private fun accessSmsContent() {
         val cursor = requireActivity().contentResolver.query(
-            Telephony.Sms.Inbox.CONTENT_URI, arrayOf(Telephony.Sms.Inbox._ID, Telephony.Sms.Inbox.BODY),
+            Telephony.Sms.Inbox.CONTENT_URI,
+            arrayOf(Telephony.Sms.Inbox._ID, Telephony.Sms.Inbox.BODY),
             null,
             null,
             null
