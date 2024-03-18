@@ -5,14 +5,9 @@
     <string name="application_preferences_reopen">MainActivity onResume() wurde seit der Installation dieser App %1$d mal aufgerufen.</string>
     <string name="tee_preference_text">Ich trinke am liebesten %1$s, ungesüsst</string>
     <string name="tee_preferences_text_sweet">Ich trinke am liebsten %1$s, mit %2$s gesüsst.</string>
-
-
-
     <string name="overview_preferences_tea_edit">Tee-Preferences editieren</string>
     <string name="overview_preferences_tea_set">Tee-Default-Prefs setzen</string>
     <string name="hello_blank_fragment">Hello Blank</string>
-
-
     <string name="overview_filesystem_title">Dateisystem</string>
     <string name="overview_filesystem_externalcheck">Externen Speicher benutzen</string>
     <string name="overview_filesystem_externalhint">External storage is mounted (writable)</string>
