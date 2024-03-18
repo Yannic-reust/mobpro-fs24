@@ -1,0 +1,45 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OverviewFragment">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/welcome_text" />
+
+
+
+
+        <TextView
+            android:id="@+id/tv_preferences_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:background="@color/neo_green"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="8dp"
+            android:text="@string/application_title" />
+
+        <TextView
+            android:id="@+id/tv_preferences_reopen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/application_preferences_reopen" />
+
+    </LinearLayout>
+</ScrollView>
+</FrameLayout>

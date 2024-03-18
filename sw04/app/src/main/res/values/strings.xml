@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">persistenz</string>
+    <string name="welcome_text">HSLU Mobile Programming</string>
+    <string name="application_title">Application-Preferences</string>
+    <string name="application_preferences_reopen">MainActivity onResume() wurde seit der Installation dieser App %1$d mal aufgerufen.</string>
+
+</resources>
