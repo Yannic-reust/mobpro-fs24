@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="teaSweetener">
+        <item>Assugrin</item>
+        <item>Süssstoff</item>
+        <item>Kristallzucker</item>
+    </string-array>
+    <string-array name="teaSweetenerValues">
+        <item>refined</item>
+        <item>artificial</item>
+        <item>natural</item>
+    </string-array>
+</resources>

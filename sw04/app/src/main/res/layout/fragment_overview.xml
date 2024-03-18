@@ -40,6 +40,110 @@
             android:layout_height="wrap_content"
             android:text="@string/application_preferences_reopen" />
 
+        <TextView
+            android:id="@+id/tv_tee_preference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tee_preference_text" />
+
+
+
+
+        <Button
+            android:id="@+id/btn_preferences_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yeti_blue"
+            android:text="@string/overview_preferences_tea_edit"
+            android:textAllCaps="true" />
+
+        <Button
+            android:id="@+id/btn_preferences_set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yeti_blue"
+            android:text="@string/overview_preferences_tea_set"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/tv_filesystem_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:background="@color/neo_green"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="8dp"
+            android:text="@string/overview_filesystem_title" />
+
+        <CheckBox
+            android:id="@+id/cb_filesystem_external"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/overview_filesystem_externalcheck" />
+
+        <TextView
+            android:id="@+id/tv_filesystem_mounted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="-8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/overview_filesystem_externalhint"
+            android:textColor="#63000000" />
+
+        <EditText
+            android:id="@+id/et_filesystem_random"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/overview_filesystem_randomtext"
+            android:inputType="text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_filesystem_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/yeti_blue"
+                android:text="@string/overview_filesystem_save" />
+
+            <Button
+                android:id="@+id/btn_filesystem_load"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/yeti_blue"
+                android:text="@string/overview_filesystem_load" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_provider_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/neo_green"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="8dp"
+            android:text="@string/overview_provider_title" />
+
+        <Button
+            android:id="@+id/btn_provider_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:backgroundTint="@color/yeti_blue"
+            android:text="@string/overview_provider_showsms" />
+
     </LinearLayout>
+
+
 </ScrollView>
 </FrameLayout>

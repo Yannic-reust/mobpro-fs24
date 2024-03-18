@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        app:key="teaPrefs"
+        app:title="Tee Präferenzen">
+
+        <CheckBoxPreference
+            app:key="teaWithSugar"
+            app:persistent="true"
+            app:summary="Soll der Tee gesüsst werden?"
+            app:title="Gesüsster Tee" />
+
+        <ListPreference
+            app:dependency="teaWithSugar"
+            app:entries="@array/teaSweetener"
+            app:entryValues="@array/teaSweetenerValues"
+            app:key="teaSweetener"
+            app:persistent="true"
+            app:shouldDisableView="true"
+            app:summary="Womit soll der Tee gesüsst werden?"
+            app:title="Süssstoff" />
+
+        <EditTextPreference
+            app:key="teaPreferred"
+            app:persistent="true"
+            app:summary="z.B.&quot;Lipton/Pfefferminztee&quot;"
+            app:title="Bevorzugte Marke/Sorte" />
+
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>
